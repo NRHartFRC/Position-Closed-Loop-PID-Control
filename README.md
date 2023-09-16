@@ -1,9 +1,9 @@
 # Position Closed Loop PID Control
 ![PositionPIDControlTestbench](images/PositionPIDControlTestbench.jpg)  
-<figcaption align = "left"><b>Figure 1: Coach Werner's testbench with RoboRio, Sparkmax, potentiometer, and JE-PLG-410</b></figcaption><br>
+<figcaption align = "left"><b>Figure 1: Coach Werner's testbench with RoboRio, Sparkmax, potentiometer, and JE-PLG-410.</b></figcaption><br>
 
 # Description
-This program exhibits a closed loop PID controller to scontrol the position of a motor. There are two different modes/options: manual mode, and analog mode. Manual mode
+This program demonstrates a closed loop PID postion controller that controls the position of a 'shuttle' along a lead screw. The lead screw is driven by a brushed DC motor using a SparkMax motor controller. There are two different modes/options for position control: manual mode, and analog mode. Manual mode requires the user to manually type the `Set Rotations` value. Analog mode uses real-time data from the analog input channel of the RoboRio using a potentiometer. A practical application of this code is to command a motor to a known rotational position and hold it there.
 
 # Usage
 Set the variables at the beginning of the example to match your setup.
@@ -11,25 +11,27 @@ Set the variables at the beginning of the example to match your setup.
 - `MotorType` - kBrushed or kBrushless
 - `SparkMaxRelativeEncoder.Type.kQuadrature` - KQuadrature or kHallSensor
 - `countsPerRev` - 4
-- `AnalogInput` - channel 0
+- `AnalogInput` channel - 0
 
 # Walk Through
 ## Code Specifications
 - M. Werner's testbench setup
 - VS Code (w/ WPILib Extensions)
 - SmartDashboard 2023 (an application for widgets, vs. Shuffleboard plugin)
-- RoboRio
-- CAN bus
-- PDP
-- Ethernet/USB/Radio
-- 12V DC power supply
-- REV SparkMax
-- REV breakout board
-- Brushed DC motor with gearbox and Hall Sensor: [JE-PLG-410](https://www.andymark.com/products/johnson-electric-plg-gearmotor-and-output-shaft)
-- encoder (*RelativeEncoder library--specify kQuadrature in lieu of kHallSensor*)
-- 2X normally closed limit switches
-- potentiometer (OPTION 2, analog mode only)
-- 3X jumper wires  (OPTION 2, analog mode only)
+- [RoboRio](https://www.andymark.com/products/ni-roborio-2?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMnJvYm9yaW8lMjIlN0Q)
+- [CAN bus](https://www.andymark.com/products/can-bus-cable-25ft?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViYjUxZGQ3YmM2ZjZkNmRjMGU2YTFlYg)
+- [PDP](https://www.andymark.com/products/power-distribution-panel?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIyYnV0dG9uJTIyJTNBJTIyc2VhcmNoJTIyJTJDJTIycSUyMiUzQSUyMnBkcCUyMiUyQyUyMnV0ZjglMjIlM0ElMjIlRTIlOUMlOTMlMjIlN0Q)
+- [Ethernet/USB/Radio](https://www.andymark.com/products/ethernet-cable?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMmV0aGVybmV0JTIyJTdE)
+- Wire, connectors, resistors
+- [12V DC power supply](https://www.andymark.com/products/mk-es17-12-12v-sla-battery-set-of-2?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViYjYxODJhYmM2ZjZkNmRlMWU2OWY1Mg)
+- [120 A breaker](https://www.andymark.com/products/120-amp-breaker?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMmJyZWFrZXIlMjIlN0Q)
+- [20 A Snap Action Breaker](https://www.andymark.com/products/20-amp-snap-action-breaker?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViZGZhMzFlZmU5M2M2NDg5NmEyYzc1Zg)
+- [REV SparkMax](https://www.andymark.com/products/spark-max-brushless-and-brushed-dc-motor-controller?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMnNwYXJrbWF4JTIyJTdE)
+- [REV SparkMax Data Port Breakout Board](https://www.revrobotics.com/rev-11-1278/)
+- [JE-PLG-410](https://www.andymark.com/products/johnson-electric-plg-gearmotor-and-output-shaft): Brushed DC motor with gearbox and encoder (*RelativeEncoder library--specify kQuadrature in lieu of kHallSensor*)
+- [2X normally closed limit switches](https://www.andymark.com/products/push-switch?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViZGZhNTlhZmU5M2M2NGM4MGZkZjFhMw)
+- [potentiometer](https://www.andymark.com/products/precision-potentiometer-10turn-5kohms?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMnBvdGVudGlvbWV0ZXIlMjIlN0Q) (OPTION 2, analog mode only)
+- [3X jumper wires](https://www.andymark.com/products/male-to-female-jumper-cables-10-pack?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViYjYxODZhYmM2ZjZkNmRlMWU2OWY5Yg) (OPTION 2, analog mode only)
 
 ## **Instructions**
 - download ZIP file or clone this repository
@@ -71,6 +73,4 @@ For analog option, the potentiometer completely controls the shuttle as shown in
 
 ## Future
 - Sendable chooser for Option 1 (manual) and Option 2 (analog input) instead of commenting and uncommenting options
-- Migrate to separate commands for integration purposes
-
-
+- Partition code into separate classes (.java files) for easy integration purposes

@@ -31,7 +31,7 @@ public class Robot extends TimedRobot {
   private RelativeEncoder m_encoder;
   public double kP, kI, kD, kIz, kFF, kMaxOutput, kMinOutput;
 
-  // limit switch intitialization (where does SparkMaxLimitSwitch class come from?)
+  // limit switch intitialization
   private SparkMaxLimitSwitch leftLimitSwitch;
   private SparkMaxLimitSwitch rightLimitSwitch;  
 

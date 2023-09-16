@@ -59,7 +59,7 @@ public class Robot extends TimedRobot {
      */
     m_pidController = m_motor.getPIDController();
 
-    // Encoder member variable/object created to display position values
+    // Encoder member variable/object created to display position values, use kQuadrature instead of kHallSensor
     m_encoder = m_motor.getEncoder(SparkMaxRelativeEncoder.Type.kQuadrature, 4);
 
     // PID coefficients

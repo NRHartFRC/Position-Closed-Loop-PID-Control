@@ -28,7 +28,7 @@ Set the variables at the beginning of the example to match your setup.
 - [20 A Snap Action Breaker](https://www.andymark.com/products/20-amp-snap-action-breaker?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViZGZhMzFlZmU5M2M2NDg5NmEyYzc1Zg)
 - [REV SparkMax](https://www.andymark.com/products/spark-max-brushless-and-brushed-dc-motor-controller?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMnNwYXJrbWF4JTIyJTdE)
 - [REV SparkMax Data Port Breakout Board](https://www.revrobotics.com/rev-11-1278/)
-- [JE-PLG-410](https://www.andymark.com/products/johnson-electric-plg-gearmotor-and-output-shaft): Brushed DC motor with gearbox and encoder (*RelativeEncoder library--specify kQuadrature in lieu of kHallSensor*)
+- [JE-PLG-410](https://www.andymark.com/products/johnson-electric-plg-gearmotor-and-output-shaft): Brushed DC motor with gearbox and encoder
 - [2X normally closed limit switches](https://www.andymark.com/products/push-switch?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViZGZhNTlhZmU5M2M2NGM4MGZkZjFhMw)
 - [potentiometer](https://www.andymark.com/products/precision-potentiometer-10turn-5kohms?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6Ok5hdmlnYXRpb246OlNlYXJjaFJlc3VsdHMvJTdCJTIycSUyMiUzQSUyMnBvdGVudGlvbWV0ZXIlMjIlN0Q) (OPTION 2, analog mode only)
 - [3X jumper wires](https://www.andymark.com/products/male-to-female-jumper-cables-10-pack?via=Z2lkOi8vYW5keW1hcmsvV29ya2FyZWE6OkNhdGFsb2c6OkNhdGVnb3J5LzViYjYxODZhYmM2ZjZkNmRlMWU2OWY5Yg) (OPTION 2, analog mode only)
@@ -38,14 +38,14 @@ Set the variables at the beginning of the example to match your setup.
 - open WPILib VSCode application
 - File > Open Folder...
 - select and open this root folder (Position Closed Loop PID Control)
-- wiring connections (power, CAN bus, breakout board connections, connect potentiometer to analog input 0, limit switches)
+- wiring connections
 - deploy: right click build.gradle file > click Deploy Robot Code
 - terminal will appear and confirm BUILD SUCCESSFUL
 - open FRC Driver Station
 - console: click gear icon > View Console
 - open SmartDashboard 2023 application (comes with WPILib Installer for Windows)
 - click big button @ FRC Driver Station (disable if needed)
-- Return to smart dashboard and make the widgets/objects viewable: View > Editable (toggle as needed) and View > Edit Subsystems
+- Make SmartDashboard widgets/objects viewable: View > Editable (toggle as needed) & View > Edit Subsystems
 - To get graphs, in Editable state, right click widget Change to... > LinePlot
 - Enable and rotate pot (this is Option 2)
 - Update values as desired (P, I, D, Iz, FF, Max Output, Min Output)

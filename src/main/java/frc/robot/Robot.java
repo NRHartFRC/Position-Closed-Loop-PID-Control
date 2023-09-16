@@ -45,11 +45,11 @@ public class Robot extends TimedRobot {
     m_motor = new CANSparkMax(deviceID, MotorType.kBrushed);
 
     // Set the continuous current limit (in amps)
-    int continuousCurrentLimit = 30; // Adjust this value as needed
+    int continuousCurrentLimit = 20;
     m_motor.setSmartCurrentLimit(continuousCurrentLimit);
 
     // Set the peak current limit (in amps)
-    int peakCurrentLimit = 40; // Adjust this value as needed
+    int peakCurrentLimit = 25;
     m_motor.setSecondaryCurrentLimit(peakCurrentLimit);
 
     /**
@@ -163,11 +163,11 @@ public class Robot extends TimedRobot {
      */
     // Option 1 - Manual Input
     // PIDController object is commanded to a rotation value using the SetReference() method for user-entered input
-    // m_pidController.setReference(rotations, CANSparkMax.ControlType.kPosition); // <--- CODE!
+    m_pidController.setReference(rotations, CANSparkMax.ControlType.kPosition); // <--- CODE!
 
     // Option 2 - Analog Input
     // PIDController object is commanded to a setpoint using the SetReference() method for analog input
-    m_pidController.setReference(analogsetpoint, CANSparkMax.ControlType.kPosition); // <--- CODE!
+    // m_pidController.setReference(analogsetpoint, CANSparkMax.ControlType.kPosition); // <--- CODE!
 
     // print debugging information to console (FRC Driver Station: Click gear icon > View console)
     System.out.println("kP SD: " + p);

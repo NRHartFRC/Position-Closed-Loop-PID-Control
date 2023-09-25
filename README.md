@@ -20,7 +20,6 @@ Set the variables at the beginning of the example to match your setup.
     Your browser does not support the video tag.
 </div>
 
-
 # Walk Through
 ## Code Specifications
 - M. Werner's testbench setup

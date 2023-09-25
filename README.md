@@ -16,10 +16,8 @@ Set the variables at the beginning of the example to match your setup.
 # Demo
 
 <div align="center">
-  <video width="640" height="480" controls>
-    <source src="https://drive.google.com/file/d/14nD4MGXYpmLmDjbp2KPoN8eAUyaJn56h/view?usp=sharing" type="video/mp4">
+    <video src="https://drive.google.com/file/d/14nD4MGXYpmLmDjbp2KPoN8eAUyaJn56h/view?usp=sharing" type="video/mp4">
     Your browser does not support the video tag.
-  </video>
 </div>
 
 

@@ -13,6 +13,16 @@ Set the variables at the beginning of the example to match your setup.
 - `countsPerRev` - 4
 - `AnalogInput` channel - 0
 
+# Demo
+
+<div align="center">
+  <video width="640" height="480" controls>
+    <source src="https://drive.google.com/uc?export=download&id=14nD4MGXYpmLmDjbp2KPoN8eAUyaJn56h" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
 # Walk Through
 ## Code Specifications
 - M. Werner's testbench setup
